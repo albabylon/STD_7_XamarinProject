@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicApp.Android", "PicApp\PicApp.Android\PicApp.Android.csproj", "{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicApp.iOS", "PicApp\PicApp.iOS\PicApp.iOS.csproj", "{A532D60F-CA1D-4AE0-B061-CADD39D55000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicApp", "PicApp\PicApp\PicApp.csproj", "{9E6BE2BD-E874-485E-8F57-0357819392FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CADDA94-0AB8-4BF0-8F2A-B0E17C8F6B8E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Debug|Any CPU.Deploy.0 = Debug|iPhone
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{A532D60F-CA1D-4AE0-B061-CADD39D55000}.Release|Any CPU.Deploy.0 = Release|iPhoneSimulator
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6BE2BD-E874-485E-8F57-0357819392FF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE8C36AA-D94C-4F2D-8A03-CA301AA8C10B}
+	EndGlobalSection
+EndGlobal
