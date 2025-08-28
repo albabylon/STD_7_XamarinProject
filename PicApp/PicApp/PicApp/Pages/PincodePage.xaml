@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PicApp.Pages.PincodePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="LightGray"
+    NavigationPage.HasNavigationBar="False">
+
+    <FlexLayout Direction="Column" JustifyContent="Center">
+        <FlexLayout
+            Direction="Row"
+            HeightRequest="130"
+            JustifyContent="Center">
+            <Label
+                x:Name="pinStatus"
+                FontSize="Large"
+                Text="Введите PIN из 4 цифр" />
+        </FlexLayout>
+        <FlexLayout
+            Direction="Row"
+            HeightRequest="130"
+            JustifyContent="Center">
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="1" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="2" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="3" Clicked="ButtonPinClicked"/>
+        </FlexLayout>
+        <FlexLayout
+            Direction="Row"
+            HeightRequest="130"
+            JustifyContent="Center">
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="4" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="5" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="6" Clicked="ButtonPinClicked"/>
+        </FlexLayout>
+        <FlexLayout
+            Direction="Row"
+            HeightRequest="130"
+            JustifyContent="Center">
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="7" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="8" Clicked="ButtonPinClicked"/>
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="9" Clicked="ButtonPinClicked"/>
+        </FlexLayout>
+        <FlexLayout
+            Direction="Row"
+            HeightRequest="130"
+            JustifyContent="Center">
+            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="0" Clicked="ButtonPinClicked"/>
+        </FlexLayout>
+    </FlexLayout>
+</ContentPage>
