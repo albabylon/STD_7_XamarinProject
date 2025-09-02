@@ -20,31 +20,61 @@
             Direction="Row"
             HeightRequest="130"
             JustifyContent="Center">
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="1" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="2" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="3" Clicked="ButtonPinClicked"/>
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="1" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="2" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="3" />
         </FlexLayout>
         <FlexLayout
             Direction="Row"
             HeightRequest="130"
             JustifyContent="Center">
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="4" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="5" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="6" Clicked="ButtonPinClicked"/>
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="4" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="5" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="6" />
         </FlexLayout>
         <FlexLayout
             Direction="Row"
             HeightRequest="130"
             JustifyContent="Center">
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="7" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="8" Clicked="ButtonPinClicked"/>
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="9" Clicked="ButtonPinClicked"/>
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="7" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="8" />
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="9" />
         </FlexLayout>
         <FlexLayout
             Direction="Row"
             HeightRequest="130"
             JustifyContent="Center">
-            <Button Style="{StaticResource Key=ButtonPinStyle}" Text="0" Clicked="ButtonPinClicked"/>
+            <Button
+                Clicked="ButtonPinClicked"
+                Style="{StaticResource Key=ButtonPinStyle}"
+                Text="0" />
         </FlexLayout>
     </FlexLayout>
 </ContentPage>

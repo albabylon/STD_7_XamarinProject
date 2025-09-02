@@ -1,20 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PicApp.App">
+<Application
+    x:Class="PicApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Application.Resources>
         <ResourceDictionary>
             <Style x:Key="ButtonPinStyle" TargetType="Button">
-                <Setter Property="CornerRadius" Value="50"/>
-                <Setter Property="HeightRequest" Value="100"/>
-                <Setter Property="WidthRequest" Value="100"/>
-                <Setter Property="BackgroundColor" Value="LightBlue"/>
+                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="BackgroundColor" Value="LightBlue" />
                 <Setter Property="Opacity" Value="0.8" />
-                <Setter Property="FontSize" Value="Title"/>
-                <Setter Property="Margin" Value="5"/>
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style x:Key="ButtonDefault" TargetType="Button">
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="BackgroundColor" Value="LightBlue" />
             </Style>
         </ResourceDictionary>
-        
+
     </Application.Resources>
 </Application>

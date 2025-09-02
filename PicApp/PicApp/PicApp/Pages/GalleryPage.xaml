@@ -1,12 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PicApp.Pages.GalleryPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+<ContentPage
+    x:Class="PicApp.Pages.GalleryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <CollectionView HorizontalOptions="FillAndExpand"
+                        HorizontalScrollBarVisibility="Always"
+                        ItemsSource="{Binding Images}">
+            
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Image Aspect="AspectFill"
+                           HeightRequest="100"
+                           Source="{Binding Url}"
+                           WidthRequest="100">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="{Binding}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <StackLayout Grid.Row="1" Margin="5">
+            <Button
+                Clicked="OnClickedOpenImage"
+                Style="{StaticResource Key=ButtonDefault}"
+                Text="Открыть" />
+            <Button
+                Clicked="OnClickedDeleteImage"
+                Style="{StaticResource Key=ButtonDefault}"
+                Text="Удалить" />
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
