@@ -30,7 +30,7 @@ namespace PicApp.Models
                 if (url != value)
                 {
                     url = value;
-                    OnPropertyChanged("Name");
+                    OnPropertyChanged("Url");
                 }
             }
         }

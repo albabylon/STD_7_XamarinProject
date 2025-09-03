@@ -60,7 +60,12 @@ namespace PicApp.Pages
                 if (User.Pincode == _pincodeEntered.ToString())
                     await Navigation.PushAsync(new GalleryPage());
                 else
+                {
                     pinStatus.Text = "Введен неверный PIN";
+                    await Task.Delay(2000);
+                    OnAppearing();
+                    pinStatus.Text = "Введите PIN из 4 цифр";
+                }
             }
             else
             {
