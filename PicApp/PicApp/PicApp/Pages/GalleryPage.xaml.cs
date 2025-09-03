@@ -51,17 +51,12 @@ namespace PicApp.Pages
             base.OnAppearing();
         }
 
-        private void OnItemTapped(GalleryImage selectedImage)
-        {
-            // Обработка выбранного элемента
-            SelectedImage = selectedImage;
-            // Дополнительные действия: навигация, вывод сообщения и т.д.
-            Application.Current.MainPage.DisplayAlert("Выбранный элемент", $"Выбрано: {selectedImage.Name}", "OK");
-        }
+        private void OnItemTapped(GalleryImage selectedImage) 
+            => SelectedImage = selectedImage;
 
         private async void OnClickedOpenImage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PicturePage());
+            await Navigation.PushAsync(new PicturePage(SelectedImage));
         }
 
         private void OnClickedDeleteImage(object sender, EventArgs e)

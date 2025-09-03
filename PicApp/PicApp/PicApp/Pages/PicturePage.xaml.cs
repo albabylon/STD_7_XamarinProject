@@ -1,5 +1,8 @@
-﻿using System;
+﻿using PicApp.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,12 @@ namespace PicApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PicturePage : ContentPage
     {
-        public PicturePage()
+        public PicturePage(GalleryImage imageToShow)
         {
             InitializeComponent();
+
+            image.Source = imageToShow.Url;
+            imageName.Text = imageToShow.Name;
         }
     }
 }

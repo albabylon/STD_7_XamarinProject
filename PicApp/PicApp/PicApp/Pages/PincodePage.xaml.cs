@@ -71,9 +71,9 @@ namespace PicApp.Pages
             {
                 User = new User(Guid.NewGuid(), _pincodeEntered.ToString());
                 App.Current.Properties.Add("CurrentUser", User);
-                pinStatus.Text = "Введите PIN из 4 цифр";
                 _isUserExist = true;
                 CheckUserPincode();
+                pinStatus.Text = "Введите PIN из 4 цифр";
             }
         }
 
