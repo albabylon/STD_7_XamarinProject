@@ -20,7 +20,7 @@ namespace PicApp.Pages
             InitializeComponent();
 
             image.Source = imageToShow.Url;
-            imageName.Text = imageToShow.Name;
+            imageName.Text = $"{imageToShow.Name} ({imageToShow.Date})";
         }
     }
 }

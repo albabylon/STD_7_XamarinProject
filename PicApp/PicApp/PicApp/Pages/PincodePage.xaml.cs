@@ -30,7 +30,7 @@ namespace PicApp.Pages
 
             _pincodeEntered = new StringBuilder();
             _pincodeCounter = 0;
-            
+
             base.OnAppearing();
         }
 
@@ -41,6 +41,7 @@ namespace PicApp.Pages
             {
                 if (user is User realUser)
                     User = realUser;
+                pinStatus.Text = "Введите PIN из 4 цифр";
 
                 return true;
             }
@@ -53,32 +54,36 @@ namespace PicApp.Pages
 
         }
 
-        private async void CheckUserPincode()
+        private async Task CheckUserPincode()
         {
             if (_isUserExist)
             {
-                if (User.Pincode == _pincodeEntered.ToString())
-                    await Navigation.PushAsync(new GalleryPage());
-                else
-                {
-                    pinStatus.Text = "Введен неверный PIN";
-                    await Task.Delay(2000);
-                    OnAppearing();
-                    pinStatus.Text = "Введите PIN из 4 цифр";
-                }
+                await CheckExistUser();
             }
             else
             {
                 User = new User(Guid.NewGuid(), _pincodeEntered.ToString());
                 App.Current.Properties.Add("CurrentUser", User);
                 _isUserExist = true;
-                CheckUserPincode();
+                await CheckExistUser();
+            }
+        }
+
+        private async Task CheckExistUser()
+        {
+            if (User.Pincode == _pincodeEntered.ToString())
+                await Navigation.PushAsync(new GalleryPage());
+            else
+            {
+                pinStatus.Text = "Введен неверный PIN";
+                await Task.Delay(2000);
+                OnAppearing();
                 pinStatus.Text = "Введите PIN из 4 цифр";
             }
         }
 
         //handlers
-        private void ButtonPinClicked(object sender, EventArgs e)
+        private async void ButtonPinClicked(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
@@ -87,7 +92,7 @@ namespace PicApp.Pages
             }
 
             if (_pincodeCounter == 4)
-                CheckUserPincode();
+                await CheckUserPincode();
         }
     }
 }

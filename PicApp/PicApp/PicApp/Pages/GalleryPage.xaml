@@ -16,18 +16,23 @@
                 AlignContent="Start"
                 AlignItems="Start"
                 BindableLayout.ItemsSource="{Binding Images}"
-                JustifyContent="Start"
+                JustifyContent="SpaceEvenly"
                 Wrap="Wrap">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Frame
+                            x:Name="picframe"
                             Margin="2"
-                            Padding="0"
+                            Padding="1"
                             CornerRadius="5"
-                            HasShadow="True">
+                            HasShadow="True"
+                            Style="{StaticResource ImageGalleryStyle}">
 
                             <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ItemTapCommand}" CommandParameter="{Binding .}" />
+                                <TapGestureRecognizer
+                                    Tapped="OnTapped"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ItemTapCommand}" 
+                                    CommandParameter="{Binding .}" />
                             </Frame.GestureRecognizers>
 
                             <Frame.Content>

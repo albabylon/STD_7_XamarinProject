@@ -35,11 +35,26 @@ namespace PicApp.Models
             }
         }
 
-        public GalleryImage(string name = null, string url = null)
+        private string date;
+        public string Date
+        {
+            get => date;
+            set
+            {
+                if (date != value)
+                {
+                    date = value;
+                    OnPropertyChanged("Date");
+                }
+            }
+        }
+
+        public GalleryImage(string name = null, string url = null, string date = null)
         {
             Guid = Guid.NewGuid();
             this.name = name;
             this.url = url;
+            this.date = date;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
