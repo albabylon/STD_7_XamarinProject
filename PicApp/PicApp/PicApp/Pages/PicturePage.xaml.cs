@@ -19,8 +19,9 @@ namespace PicApp.Pages
         {
             InitializeComponent();
 
+            Title = imageToShow.Name;
             image.Source = imageToShow.Url;
-            imageName.Text = $"{imageToShow.Name} ({imageToShow.Date})";
+            imageName.Text = $"{imageToShow.Date}";
         }
     }
 }

@@ -2,14 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
-using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace PicApp.Pages
@@ -50,6 +46,7 @@ namespace PicApp.Pages
                     new GalleryImage("name3", "maxresdefault.jpg"),
                     new GalleryImage("name4", "maxresdefault.jpg"),
                     new GalleryImage("name5", "maxresdefault.jpg"),
+
                     new GalleryImage("name6", "maxresdefault.jpg"),
                     new GalleryImage("name7", "maxresdefault.jpg"),
                     new GalleryImage("name8", "maxresdefault.jpg"),
@@ -78,7 +75,7 @@ namespace PicApp.Pages
                 VisualStateManager.GoToState(frame, "Tap");
         }
 
-        private async void OnClickedOpenImage(object sender, EventArgs e) 
+        private async void OnClickedOpenImage(object sender, EventArgs e)
             => await Navigation.PushAsync(new PicturePage(SelectedImage));
 
         private void OnClickedDeleteImage(object sender, EventArgs e)

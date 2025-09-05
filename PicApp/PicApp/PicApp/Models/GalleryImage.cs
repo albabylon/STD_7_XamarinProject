@@ -63,5 +63,23 @@ namespace PicApp.Models
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            GalleryImage gallery = (GalleryImage)obj;
+
+            return Guid == gallery.Guid && Name == gallery.Name;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            hash = hash * 23 + Guid.GetHashCode();
+            hash = hash * 23 + Name?.GetHashCode() ?? 0;
+            hash = hash * 23 + Url?.GetHashCode() ?? 0;
+            return hash;
+        }
     }
 }
